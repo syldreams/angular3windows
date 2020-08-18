@@ -1,0 +1,20 @@
+
+  div {
+    display: inline-block;
+  }
+  .messages {
+    margin: 30px 10px;
+    float: left;
+    width: 150px;
+  }
+  .map {
+    height: 600px;
+    width: 600px;
+    margin: 30px auto;
+    border: 1px solid #cecece;
+    font-size: 40px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 800px;
+  }
+  

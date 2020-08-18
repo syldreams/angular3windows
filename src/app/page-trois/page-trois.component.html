@@ -1,0 +1,9 @@
+<p>page-trois works!</p>
+
+<div class="map">Page 3</div>
+<div class="messages">
+  <button (click)="sendMessage()">Send message to main window</button>
+  <ul>
+    <li *ngFor="let m of messages">{{ m }}</li>
+  </ul>
+</div>

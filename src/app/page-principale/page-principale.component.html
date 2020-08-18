@@ -1,0 +1,28 @@
+<p>page-principale works!</p>
+<header>
+    Vous êtes sur la page principale, <a (click)="openMap()">click ici</a> pour la page 2, <a (click)="ouvrirPage3()">click là</a> pour la page 3.
+    <br>
+    <button (click)="sendMessage()" [disabled]="!map">Send message</button> to the other window.
+    Messages:
+    <ul>
+      <li *ngFor="let m of messages">{{ m }}</li>
+    </ul>
+  </header>
+
+  <main>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Select</th>
+          <th>Name</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of rows">
+          <td><input type="checkbox"></td>
+          <td>{{ row.name }}</td>
+          <td>{{ row.value }}</td>
+        </tr>
+    </table>
+  </main>

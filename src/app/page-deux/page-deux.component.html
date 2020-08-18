@@ -1,0 +1,9 @@
+<p>page-deux works!</p>
+
+<div class="map">Big map</div>
+<div class="messages">
+  <button (click)="sendMessage()">Send message to main window</button>
+  <ul>
+    <li *ngFor="let m of messages">{{ m }}</li>
+  </ul>
+</div>

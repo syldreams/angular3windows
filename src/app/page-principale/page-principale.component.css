@@ -1,0 +1,26 @@
+
+    main {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      .table {
+            border: 1px solid #cbcbcb;
+            width: 100%;
+      }
+      thead {
+        background-color: #d0d0d0;
+      }
+      td,
+      th {
+        border-bottom: 1px solid #cbcbcb;
+        border-collapse: collapse;
+        padding: 0
+      }
+      tr:nth-child(even) {
+        background-color: #e0e0e0;
+      }
+      a {
+        text-decoration: underline;
+      }
+    
