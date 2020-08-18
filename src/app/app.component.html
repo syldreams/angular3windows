@@ -1,2 +1,41 @@
-App component OK
+<p>App component</p>
+
+<div class=titre>
+    <div>Paramétrage du scénario</div>
+</div>
+
+<div [hidden]=false>
+  
+  <h1>1) Chargement données côté serveur</h1>
+  <button mat-raised-button color="primary" (click)="importerExcel()">Lancer importation des données Excel dans la base de données</button>
+  <p [hidden]="ne_pas_afficher_reponse_import_excel" >Réponse du serveur: {{reponse_import_excel}}</p>
+  <hr>
+  <h1>2) Paramètrage du scénario</h1>
+  <h2>Productions à lancer</h2>
+  <ul>
+    <li *ngFor="let tache of taches">
+      <h3 (click)="tacheClicked(tache)">{{tache.titre}}</h3>
+    </li>
+  </ul>
+  
+  <hr>
+  
+  Titre tâche <input type="text" [(ngModel)]="tacheSelectionnee.titre"/><br>
+  Description <input type="text" [(ngModel)]="tacheSelectionnee.desc"/><br>
+  Date début <input type="text" [(ngModel)]="tacheSelectionnee.debut"/><br>
+  Fréquence annuelle<input type="text" [(ngModel)]="tacheSelectionnee.duree"/><br>
+  
+  <button mat-raised-button color="primary" *ngIf="tacheSelectionnee.id != -1" (click)="updateTache()">Mettre à jour</button>
+  <button mat-raised-button color="primary" (click)="createTache()">Ajouter nouveau produit</button>
+  <button mat-raised-button color="primary" *ngIf="tacheSelectionnee.id != -1" (click)="deleteTache()">Supprimer</button>
+  <hr>
+  <!--
+  <h1>3) Lancement des scripts</h1>
+  <button mat-raised-button color="primary" (click)="exporterExcel()">Lancer export en fichier Excel</button>
+  <p [hidden]="ne_pas_afficher_reponse_export_excel" >Réponse du serveur: {{reponse_export_excel}}</p>
+  -->
+  
+  </div>
+
+
 <router-outlet></router-outlet>
